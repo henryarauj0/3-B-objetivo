@@ -31,4 +31,13 @@ let dias = Math.floor(horas / 24);
 return dias + " Dias " + horas + " Horas " + minutos + " Minutos " + segundos + " Segundos "
 
 }
+function atualizaCronometro(){
+
+    for(let i=0; i<contadores.length; i++){
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0]
+        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1]
+        document.getElementById("mins"+i).textContent = calculaTempo(tempos[i])[2]
+        document.getElementById("segs"+i).textContent = calculaTempo(tempos[i])[3]
+    }
+}
 

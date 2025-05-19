@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 :root{
-
-    
+--fonte-primaria: "boldonse" , system-ui;
+--fonte-secundaria: "open sans", sans-serif;
 --cor-de-fundo: #00072dff;
 --fort-blue: #001c55ff;
 --royal-blue-traditional: #0a2472ff;
@@ -28,6 +28,7 @@ body{
     margin: 0 auto;
 }
 .titulo-principal{
+    font-family: var(--fonte-primaria);
     text-align: left;
     width: 100%;
     font-size: 32px;
@@ -63,6 +64,36 @@ body{
 .botao:last-child{
     border-radius: 0 0 40px 40px;
 }
+.botao.ativo{
+    background-color: var(--royal-blue-traditional);
+    border-bottom: 4px solid rgb(0, 179, 255);
+}
+.abas-texto{
+    background-color: var(--fort-blue);
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+}
+
+.contador{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+.contador-digito-texto{
+    color: var(--bice-blue);
+    font-size: 20px;
+    margin: 0;
+}
+
 
 @media screen and (min-widht: 768px){
     .botoes{
@@ -75,10 +106,7 @@ body{
         border-radius: 0 40px 0 0;
     }
 }
-.ativo{
-    background-color: var(--royal-blue-traditional);
-    border-bottom: 4px solid rgb(0, 179, 255);
-}
+
 
 
 
